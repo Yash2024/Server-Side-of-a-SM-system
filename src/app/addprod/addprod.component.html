@@ -1,0 +1,19 @@
+<div class="content">
+    Product Id<span style="color: crimson;">*</span> <br> 
+    <input [(ngModel)]="prod.pid" text value={{prod.pid}} size="50"><br>
+    Product Name<span style="color: crimson;">*</span> <br> 
+    <input [(ngModel)]="prod.pname" text value={{prod.pname}} size="50"><br>
+    Product Price(in rupee)<span style="color: crimson;">*</span> <br> 
+    <input [(ngModel)]="prod.price" text value={{prod.price}} size="50"><br>
+    Product Description<span style="color: crimson;">*</span> <br> 
+    <input class="desc" [(ngModel)]="prod.description" text value={{prod.description}} size="50"><br>
+    <!-- Choose one Image related to your product<span style="color: crimson;">*</span> : 
+    <input type="text" [(ngModel)]="prod.de"> -->
+
+    <br>
+    <br>
+    <button (click)="addprod(prod)">Add</button>
+</div>
+
+
+

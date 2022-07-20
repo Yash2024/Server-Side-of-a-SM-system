@@ -1,0 +1,23 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="navbar">
+<ul class="nlist">
+    <li><a routerLink="/home"><i class="fa fa-home"></i>&nbsp;HOME</a></li>
+    <li><a routerLink="/about">ABOUT US</a></li>
+    <li><a routerLink="/ourproducts">OUR PRODUCTS</a></li>
+    <li><a routerLink="/addproduct">ADD PRODUCT</a></li>
+    <li><a routerLink="/contactus">CONTACT US</a></li>
+    <li class="logo"><img src="assets\cslogo.jpg" height="50px" width="50px"></li>
+</ul>
+</div>
+<div>
+    <router-outlet></router-outlet>
+</div>
+<div class="footer">
+    <p><small>&copy; Copyright 2022,CoalSand All Rights Reserved</small></p>
+  </div>   
+</body>

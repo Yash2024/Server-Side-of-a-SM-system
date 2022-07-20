@@ -1,0 +1,66 @@
+<body>
+    <div class="content">
+    <div *ngIf="!enableupdate">
+        Search by Product Id:<input [(ngModel)]="prod._id"n >
+        <button (click)="viewproduct(prod._id)">search</button>
+    </div>
+    <div class="updt" *ngIf="enableupdate">
+        Product Id<span style="color: crimson;" >*</span> <br> 
+        <input [(ngModel)]="prod.pid" text value={{prod.pid}} disabled size="50"><br>
+        Product Name<span style="color: crimson;">*</span> <br> 
+        <input [(ngModel)]="prod.pname" text value={{prod.pname}} size="50"><br>
+        Product Price(in rupee)<span style="color: crimson;">*</span> <br> 
+        <input [(ngModel)]="prod.price" text value={{prod.price}} size="50"><br>
+        Product Description<span style="color: crimson;">*</span> <br> 
+        <input class="desc" [(ngModel)]="prod.description" text value={{prod.description}} size="50"><br>
+        <!-- Choose one Image related to your product<span style="color: crimson;">*</span> : 
+        <input type="text" [(ngModel)]="prod.de"> -->
+
+        <br>
+        <br>
+        <button (click)="setprod(prod)">Update this product</button>
+
+    </div>
+    <div *ngIf="enableview" class="tab">
+        <table border="2">
+            <tr>
+                <th>Product</th>
+                <th style="width:70%">Details</th>
+            </tr>
+            <tr >
+                <td><img src={{prod.description}} style="width:300px;height:200px;align-items: center;"></td>
+                 <td>
+                    product id:{{prod.pid}}<br>
+                    product name:{{prod.pname}}<br>
+                    product price:Rs {{prod.price}}<br>
+                    description:{{prod.description}}<br>
+                    <button (click)="updateprod(prod._id)">Update</button>
+                    <button (click)="deleteprod(prod._id)" >Delete</button>
+                </td>
+        
+            </tr>
+        </table>
+        </div>
+        <div *ngIf="enableview || enableupdate">
+        <hr>
+    </div>
+<table class="tab" border="2">
+    <tr>
+        <th>Product</th>
+        <th style="width:70%">Details</th>
+    </tr>
+    <tr *ngFor="let pro of plist">
+        <td><img src={{pro.description}} style="width:300px;height:200px;align-items: center;"></td>
+         <td>
+            product id : {{pro.pid}}<br>
+            product name : {{pro.pname}}<br>
+            product price : Rs {{pro.price}}<br>
+            description : {{pro.description}}<br>
+            <button (click)="updateprod(pro._id)">Update</button>
+            <button (click)="deleteprod(pro._id)" >Delete</button>
+        </td>
+
+    </tr>
+</table>
+</div>
+</body>

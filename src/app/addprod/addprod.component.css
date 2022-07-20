@@ -1,0 +1,9 @@
+.content{
+    margin-top: 65px;
+    /* text-align: center; */
+    margin-left: 550px;
+    justify-content: space-between;
+}
+.desc{
+    height: 50px;
+}
